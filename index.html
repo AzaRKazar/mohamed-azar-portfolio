@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mohamed Azarudeen — Software Engineer &amp; AI Systems Builder</title>
+  <meta name="description" content="Portfolio of Mohamed Azarudeen — software engineer and AI systems builder. MS Computer Science at Stony Brook University. Local-first AI: agents, RAG pipelines, and end-to-end systems.">
+  <meta name="theme-color" content="#0a0a0b">
+  <meta property="og:title" content="Mohamed Azarudeen — Software Engineer &amp; AI Systems Builder">
+  <meta property="og:description" content="Local-first AI systems: agents, retrieval, voice — built end to end.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="assets/img/logo.png" type="image/png">
+
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link mono" href="#about">Skip to content</a>
+
+  <!-- ================= PRELOADER ================= -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <div class="preloader__name mono">MOHAMED AZARUDEEN</div>
+      <div class="preloader__count mono" id="preloaderCount">00</div>
+      <div class="preloader__bar"><span id="preloaderBar"></span></div>
+    </div>
+  </div>
+
+  <!-- ================= CURSOR (desktop only) ================= -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__dot" id="cursorDot"></div>
+    <div class="cursor__ring" id="cursorRing"></div>
+  </div>
+
+  <!-- ================= SCROLL PROGRESS ================= -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#home" aria-label="Mohamed Azarudeen — home">
+      <img class="nav__logo" src="assets/img/logo.png" alt="" width="34" height="34" decoding="async">
+      <span class="nav__monogram mono" aria-hidden="true">MA</span>
+      <span class="nav__name mono">M. AZARUDEEN</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link mono" href="#about" data-scramble>ABOUT</a>
+      <a class="nav__link mono" href="#experience" data-scramble>EXPERIENCE</a>
+      <a class="nav__link mono" href="#projects" data-scramble>PROJECTS</a>
+      <a class="nav__link mono" href="#skills" data-scramble>SKILLS</a>
+      <a class="nav__link mono" href="#contact" data-scramble>CONTACT</a>
+    </nav>
+    <div class="nav__right">
+      <a class="btn btn--small mono" href="assets/resume/Mohamed_Azarudeen_Resume.pdf" download data-magnetic>RÉSUMÉ ↓</a>
+      <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= MOBILE / FULLSCREEN MENU ================= -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__inner">
+      <nav class="menu__links" aria-label="Menu">
+        <a href="#home"       class="menu__link" style="--i:0"><span class="mono menu__num">01</span>Home</a>
+        <a href="#about"      class="menu__link" style="--i:1"><span class="mono menu__num">02</span>About</a>
+        <a href="#experience" class="menu__link" style="--i:2"><span class="mono menu__num">03</span>Experience</a>
+        <a href="#projects"   class="menu__link" style="--i:3"><span class="mono menu__num">04</span>Projects</a>
+        <a href="#education"  class="menu__link" style="--i:4"><span class="mono menu__num">05</span>Education</a>
+        <a href="#skills"     class="menu__link" style="--i:5"><span class="mono menu__num">06</span>Skills</a>
+        <a href="#resume"     class="menu__link" style="--i:6"><span class="mono menu__num">07</span>Résumé</a>
+        <a href="#contact"    class="menu__link" style="--i:7"><span class="mono menu__num">08</span>Contact</a>
+      </nav>
+      <div class="menu__foot mono">
+        <a href="https://www.linkedin.com/in/mohamedallabaksh/" target="_blank" rel="noopener">LINKEDIN ↗</a>
+        <a href="https://github.com/AzaRKazar" target="_blank" rel="noopener">GITHUB ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= 00 / HOME — HERO FILM ================= -->
+    <section class="film film--hero" id="home" data-film data-reel="01">
+      <div class="film__spacer">
+        <div class="film__stage">
+          <div class="film__media">
+            <video class="film__video" muted playsinline preload="auto" tabindex="-1" aria-hidden="true">
+              <source src="assets/video/hero.mp4" type="video/mp4">
+            </video>
+            <div class="film__fallback" aria-hidden="true"></div>
+            <div class="film__scrim" aria-hidden="true"></div>
+          </div>
+
+          <div class="hero__content">
+            <p class="hero__kicker mono" data-intro style="--i:0">MOHAMED AZARUDEEN — NEW YORK, USA</p>
+            <h1 class="hero__title">
+              <span class="hero__line" data-intro style="--i:1"><span>SOFTWARE</span></span>
+              <span class="hero__line" data-intro style="--i:2"><span>ENGINEER <em class="serif">&amp;</em></span></span>
+              <span class="hero__line hero__line--accent" data-intro style="--i:3"><span>AI SYSTEMS <em class="serif">builder</em></span></span>
+            </h1>
+            <div class="hero__foot" data-intro style="--i:4">
+              <p class="mono">MS COMPUTER SCIENCE — STONY BROOK UNIVERSITY</p>
+              <p class="mono">LOCAL-FIRST AI · AGENTS · RAG · END-TO-END SYSTEMS</p>
+            </div>
+          </div>
+
+          <div class="film__hud mono" aria-hidden="true">
+            <span class="film__timecode" data-timecode>REEL 01 — 00:00.0</span>
+            <span class="film__scrollcue">SCROLL TO PLAY <span class="film__cue-line"></span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track mono" data-marquee>
+        <span>AI SYSTEMS ✳ LOCAL-FIRST ✳ AGENTS ✳ RAG ✳ MCP ✳ FASTAPI ✳ NEXT.JS ✳ OLLAMA ✳ PYTHON ✳ TYPESCRIPT ✳ </span>
+        <span>AI SYSTEMS ✳ LOCAL-FIRST ✳ AGENTS ✳ RAG ✳ MCP ✳ FASTAPI ✳ NEXT.JS ✳ OLLAMA ✳ PYTHON ✳ TYPESCRIPT ✳ </span>
+      </div>
+    </div>
+
+    <!-- ================= 01 / ABOUT ================= -->
+    <section class="section section--about texture-1" id="about">
+      <div class="section__head">
+        <span class="section__num mono">01</span>
+        <span class="section__label mono">ABOUT</span>
+        <span class="section__rule" data-reveal="rule"></span>
+      </div>
+      <div class="about__grid">
+        <h2 class="about__statement" data-reveal="lines">
+          I build AI that runs <em class="serif">close to home</em> — agents, retrieval and voice, on your machine, not someone else's cloud.
+        </h2>
+        <div class="about__body">
+          <p data-reveal>I'm Mohamed — a software engineer who builds AI systems end to end: the pipeline, the model integration, the API, and the interface it all lives in.</p>
+          <p data-reveal>I'm currently pursuing a Master of Science in Computer Science at Stony Brook University, where I also work as a Research &amp; Student Assistant. Before that, I worked as a Software Engineer Intern at LuminaView in New York, and as a Software Engineer I at Mavdero Techservices in Chennai, India.</p>
+          <p data-reveal>The through-line in my work is <strong>local-first AI</strong> — systems powered by lightweight local LLMs, RAG pipelines with cited sources, multi-agent orchestration, and interfaces that make all of it feel effortless.</p>
+          <div class="about__now mono" data-reveal>
+            <span>CURRENTLY</span>
+            <span>MS CS @ STONY BROOK · RESEARCH &amp; STUDENT ASSISTANT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02 / EXPERIENCE ================= -->
+    <section class="section" id="experience">
+      <div class="section__head">
+        <span class="section__num mono">02</span>
+        <span class="section__label mono">EXPERIENCE</span>
+        <span class="section__rule" data-reveal="rule"></span>
+      </div>
+
+      <ol class="xp">
+        <li class="xp__row" data-reveal>
+          <span class="xp__idx mono">E·01</span>
+          <div class="xp__main">
+            <h3 class="xp__role">Research &amp; Student Assistant</h3>
+            <p class="xp__org">Stony Brook University</p>
+          </div>
+          <div class="xp__meta mono">
+            <span>NEW YORK, NY, USA</span>
+            <span>Aug 2024 — Present</span>
+          </div>
+        </li>
+        <li class="xp__row" data-reveal>
+          <span class="xp__idx mono">E·02</span>
+          <div class="xp__main">
+            <h3 class="xp__role">Software Engineer Intern</h3>
+            <p class="xp__org">LuminaView</p>
+          </div>
+          <div class="xp__meta mono">
+            <span>NEW YORK, NY, USA</span>
+            <span>May 2025 — Aug 2025</span>
+          </div>
+        </li>
+        <li class="xp__row" data-reveal>
+          <span class="xp__idx mono">E·03</span>
+          <div class="xp__main">
+            <h3 class="xp__role">Software Engineer I</h3>
+            <p class="xp__org">Mavdero Techservices</p>
+          </div>
+          <div class="xp__meta mono">
+            <span>CHENNAI, INDIA</span>
+            <span>Dec 2023 — Aug 2024</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= 03 / PROJECTS ================= -->
+    <section class="section" id="projects">
+      <div class="section__head">
+        <span class="section__num mono">03</span>
+        <span class="section__label mono">SELECTED PROJECTS</span>
+        <span class="section__rule" data-reveal="rule"></span>
+      </div>
+
+      <div class="projects">
+
+        <article class="project" data-reveal>
+          <div class="project__media">
+            <div class="media" data-parallax>
+              <img src="assets/img/project-1-blog-to-podcast.png"
+                   alt="Screenshot of the Blog to Podcast Agent web application"
+                   loading="lazy" decoding="async">
+              <div class="media__ph mono" aria-hidden="true">
+                <span>P·01</span><small> assets/img/project-1-blog-to-podcast.png</small>
+              </div>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__meta mono"><span>P·01</span><span>FULL-STACK · AUDIO AI</span></div>
+            <h3 class="project__title">Blog to Podcast Agent</h3>
+            <p class="project__desc">Turns any blog post into a narrated podcast episode: paste a URL and watch it get scraped, summarized by a local LLM, and converted to speech, live, end to end. Rebuilt from a single-file script into a proper two-tier system — FastAPI + SQLite backend, Next.js/TypeScript/Tailwind frontend — with real persistence and live progress updates, as a system-design learning project.</p>
+            <ul class="tags mono">
+              <li>FASTAPI</li><li>SQLITE</li><li>NEXT.JS</li><li>TYPESCRIPT</li><li>TAILWIND</li><li>LOCAL LLM</li><li>TTS</li>
+            </ul>
+            <a class="link-arrow mono" href="https://github.com/AzaRKazar/blog_to_podcast_agent" target="_blank" rel="noopener">VIEW ON GITHUB <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="project" data-reveal>
+          <div class="project__media">
+            <div class="media" data-parallax>
+              <img src="assets/img/project-2-support-assistant.jpg"
+                   alt="Screenshot of the AI Customer Support Knowledge Assistant"
+                   loading="lazy" decoding="async">
+              <div class="media__ph mono" aria-hidden="true">
+                <span>P·02</span><small>add assets/img/project-2-support-assistant.jpg</small>
+              </div>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__meta mono"><span>P·02</span><span>RAG · SUPPORT SYSTEMS</span></div>
+            <h3 class="project__title">AI Customer Support Knowledge Assistant</h3>
+            <p class="project__desc">A locally-runnable RAG-powered support system with a FastAPI backend, SQLite ticketing, and a Streamlit UI — answers documentation questions with cited sources, in both text and voice.</p>
+            <ul class="tags mono">
+              <li>RAG</li><li>FASTAPI</li><li>SQLITE</li><li>STREAMLIT</li><li>VOICE</li><li>CITED SOURCES</li>
+            </ul>
+            <!-- TODO(you): this href duplicates the breakup-recovery repo — replace with the
+                 actual repo URL for the AI Customer Support Knowledge Assistant -->
+            <a class="link-arrow mono" href="https://github.com/AzaRKazar/ai_breakup_recovery_agent" target="_blank" rel="noopener">VIEW ON GITHUB <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="project" data-reveal>
+          <div class="project__media">
+            <div class="media" data-parallax>
+              <img src="assets/img/project-3-breakup-recovery.jpg"
+                   alt="Screenshot of the AI Breakup Recovery Companion app"
+                   loading="lazy" decoding="async">
+              <div class="media__ph mono" aria-hidden="true">
+                <span>P·03</span><small>add assets/img/project-3-breakup-recovery.jpg</small>
+              </div>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__meta mono"><span>P·03</span><span>LOCAL LLM · MULTI-AGENT</span></div>
+            <h3 class="project__title">AI Breakup Recovery Companion</h3>
+            <p class="project__desc">A local, privacy-first emotional wellness app powered by lightweight Ollama LLMs (phi3, mistral, llama3) — zero cloud APIs, zero internet required. Four specialized agents — Therapist, Closure, Routine Planner, Brutal Honesty — collaborate to offer structured, empathetic breakup recovery support, including OCR-based chat screenshot analysis and a 7-day self-care plan.</p>
+            <ul class="tags mono">
+              <li>OLLAMA</li><li>PHI3 · MISTRAL · LLAMA3</li><li>MULTI-AGENT</li><li>OCR</li><li>PRIVACY-FIRST</li>
+            </ul>
+            <a class="link-arrow mono" href="https://github.com/AzaRKazar/ai_breakup_recovery_agent" target="_blank" rel="noopener">VIEW ON GITHUB <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="project" data-reveal>
+          <div class="project__media">
+            <div class="media" data-parallax>
+              <img src="assets/img/project-4-github-mcp.jpeg"
+                   alt="Screenshot of the GitHub MCP Agent Streamlit app"
+                   loading="lazy" decoding="async">
+              <div class="media__ph mono" aria-hidden="true">
+                <span>P·04</span><small>add assets/img/project-4-github-mcp.jpeg</small>
+              </div>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__meta mono"><span>P·04</span><span>MCP · DEV TOOLS</span></div>
+            <h3 class="project__title">GitHub MCP Agent</h3>
+            <p class="project__desc">A Streamlit app for exploring and analyzing GitHub repositories using natural language, combining an MCP GitHub server with local Ollama-powered reasoning for a fully local-first AI-driven repo analysis assistant.</p>
+            <ul class="tags mono">
+              <li>MCP</li><li>STREAMLIT</li><li>OLLAMA</li><li>NATURAL LANGUAGE</li><li>LOCAL-FIRST</li>
+            </ul>
+            <a class="link-arrow mono" href="https://github.com/AzaRKazar/github_mcp_agent" target="_blank" rel="noopener">VIEW ON GITHUB <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="project" data-reveal>
+          <div class="project__media">
+            <div class="media" data-parallax>
+              <img src="assets/img/project-5-injury-risk.png"
+                   alt="Charts from the Athlete Injury Risk Analyzer project"
+                   loading="lazy" decoding="async">
+              <div class="media__ph mono" aria-hidden="true">
+                <span>P·05</span><small>add assets/img/project-5-injury-risk.png</small>
+              </div>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__meta mono"><span>P·05</span><span>ML · SPORTS ANALYTICS</span></div>
+            <h3 class="project__title">Athlete Injury Risk Analyzer</h3>
+            <p class="project__desc">A predictive analytics project classifying athletes into injury risk categories (Low / Medium / High) using force- and impulse-symmetry biomechanical metrics. Includes statistical hypothesis testing, Random Forest models compared across SMOTE, SMOTEENN, and class-weighting techniques for class imbalance, and risk prediction on unseen athlete data.</p>
+            <ul class="tags mono">
+              <li>PYTHON</li><li>RANDOM FOREST</li><li>SMOTE / SMOTEENN</li><li>HYPOTHESIS TESTING</li>
+            </ul>
+            <a class="link-arrow mono" href="https://github.com/AzaRKazar/Athlete-Injury-Risk-Analyzer" target="_blank" rel="noopener">VIEW ON GITHUB <span>↗</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= INTERLUDE — FILM 02 ================= -->
+    <section class="film film--interlude" id="interlude" data-film data-reel="02" aria-label="Interlude">
+      <div class="film__spacer">
+        <div class="film__stage">
+          <div class="film__media">
+            <video class="film__video" muted playsinline preload="metadata" tabindex="-1" aria-hidden="true">
+              <source src="assets/video/midpage.mp4" type="video/mp4">
+            </video>
+            <div class="film__fallback" aria-hidden="true"></div>
+            <div class="film__scrim" aria-hidden="true"></div>
+          </div>
+
+          <div class="interlude__content">
+            <h2 class="interlude__title">
+              <span class="interlude__line" data-line="0">SYSTEMS THAT</span>
+              <span class="interlude__line interlude__line--serif serif" data-line="1">think locally.</span>
+            </h2>
+            <div class="interlude__notes mono">
+              <p data-line="2">NO CLOUD DEPENDENCY.</p>
+              <p data-line="3">NO DATA LEAVING THE MACHINE.</p>
+              <p data-line="4">AGENTS, RETRIEVAL &amp; VOICE — WHERE THE USER LIVES.</p>
+            </div>
+          </div>
+
+          <div class="film__hud mono" aria-hidden="true">
+            <span class="film__timecode" data-timecode>REEL 02 — 00:00.0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 04 / EDUCATION ================= -->
+    <section class="section section--education texture-2" id="education">
+      <div class="section__head">
+        <span class="section__num mono">04</span>
+        <span class="section__label mono">EDUCATION</span>
+        <span class="section__rule" data-reveal="rule"></span>
+      </div>
+      <div class="edu" data-reveal>
+        <p class="edu__degree serif">Master of Science, <em>Computer Science</em></p>
+        <h3 class="edu__school">STONY BROOK UNIVERSITY, SUNY</h3>
+        <div class="edu__meta mono">
+          <span>AUG 2024 — MAY 2026</span>
+          <span>NEW YORK, USA</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 05 / SKILLS ================= -->
+    <section class="section" id="skills">
+      <div class="section__head">
+        <span class="section__num mono">05</span>
+        <span class="section__label mono">SKILLS</span>
+        <span class="section__rule" data-reveal="rule"></span>
+      </div>
+
+      <div class="skills">
+        <div class="skills__group" data-reveal>
+          <h3 class="skills__cat mono">LANGUAGES</h3>
+          <ul class="skills__list">
+            <li>Python</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li>
+          </ul>
+        </div>
+        <div class="skills__group" data-reveal>
+          <h3 class="skills__cat mono">AI &amp; ML</h3>
+          <ul class="skills__list">
+            <li>Local LLMs — Ollama <span class="skills__sub mono">phi3 · mistral · llama3</span></li>
+            <li>RAG pipelines</li>
+            <li>Multi-agent systems</li>
+            <li>Model Context Protocol (MCP)</li>
+            <li>OCR</li>
+            <li>Text-to-speech</li>
+            <li>scikit-learn · Random Forest</li>
+            <li>SMOTE / SMOTEENN</li>
+            <li>Statistical hypothesis testing</li>
+          </ul>
+        </div>
+        <div class="skills__group" data-reveal>
+          <h3 class="skills__cat mono">BACKEND &amp; DATA</h3>
+          <ul class="skills__list">
+            <li>FastAPI</li><li>REST APIs</li><li>SQLite</li><li>Web scraping</li><li>Two-tier system design</li>
+          </ul>
+        </div>
+        <div class="skills__group" data-reveal>
+          <h3 class="skills__cat mono">FRONTEND &amp; TOOLS</h3>
+          <ul class="skills__list">
+            <li>Next.js</li><li>React</li><li>Tailwind CSS</li><li>Streamlit</li><li>HTML / CSS</li><li>Git &amp; GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 06 / RESUME ================= -->
+    <section class="section section--resume" id="resume">
+      <div class="section__head">
+        <span class="section__num mono">06</span>
+        <span class="section__label mono">RÉSUMÉ</span>
+        <span class="section__rule" data-reveal="rule"></span>
+      </div>
+      <div class="resume" data-reveal>
+        <h2 class="resume__title">The <em class="serif">one-page</em> version.</h2>
+        <a class="btn btn--big mono" href="assets/resume/Mohamed_Azarudeen_Resume.pdf" download data-magnetic>
+          DOWNLOAD RÉSUMÉ (PDF) ↓
+        </a>
+        <p class="resume__note mono">PDF · assets/resume/Mohamed_Azarudeen_Resume.pdf</p>
+      </div>
+    </section>
+
+    <!-- ================= 07 / CONTACT — CLOSING FILM ================= -->
+    <section class="film film--closing" id="contact" data-film data-reel="03">
+      <div class="film__spacer">
+        <div class="film__stage">
+          <div class="film__media">
+            <video class="film__video" muted playsinline preload="metadata" tabindex="-1" aria-hidden="true">
+              <source src="assets/video/closing.mp4" type="video/mp4">
+            </video>
+            <div class="film__fallback" aria-hidden="true"></div>
+            <div class="film__scrim film__scrim--heavy" aria-hidden="true"></div>
+          </div>
+
+          <div class="contact__content">
+            <p class="contact__kicker mono" data-line="0">07 — CONTACT</p>
+            <h2 class="contact__title">
+              <span data-line="1">LET'S BUILD</span>
+              <span data-line="2">SOMETHING <em class="serif">that thinks.</em></span>
+            </h2>
+
+            <a class="contact__email" href="mailto:azarudeen.allabaksh@gmail.com" data-line="3">azarudeen.allabaksh@gmail.com</a>
+
+            <div class="contact__links mono" data-line="4">
+              <a class="link-arrow mono" href="https://www.linkedin.com/in/mohamedallabaksh/" target="_blank" rel="noopener">LINKEDIN <span>↗</span></a>
+              <a class="link-arrow mono" href="https://github.com/AzaRKazar" target="_blank" rel="noopener">GITHUB <span>↗</span></a>
+              <a class="link-arrow mono" href="assets/resume/Mohamed_Azarudeen_Resume.pdf" download>RÉSUMÉ <span>↓</span></a>
+            </div>
+          </div>
+
+          <div class="film__hud mono" aria-hidden="true">
+            <span class="film__timecode" data-timecode>REEL 03 — 00:00.0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer__row mono">
+      <span>© <span id="footerYear">2026</span> MOHAMED AZARUDEEN</span>
+      <span class="footer__clock" id="footerClock">NEW YORK — 00:00:00</span>
+      <a href="#home" class="footer__top" id="footerTop">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
