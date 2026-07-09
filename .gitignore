@@ -2,5 +2,6 @@
 serve.py
 Thumbs.db
 assets/video/closing.mp4
+assets/video/
 *.mp4
 *.md
