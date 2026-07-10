@@ -191,15 +191,36 @@
           // nudge so the first frame actually paints (iOS/Safari)
           try { video.currentTime = 0.001; } catch (_) { /* not seekable yet */ }
         };
+        // iOS Safari: ignores preload, and won't decode/paint a paused video
+        // until it has gone through a (muted, inline) play/pause cycle.
+        video.setAttribute("webkit-playsinline", "");
+        film.prime = () => {
+          if (film.primed || film.missing) return;
+          film.primed = true;
+          if (video.readyState === 0) { try { video.load(); } catch (_) {} }
+          const p = video.play();
+          if (p && p.then) {
+            p.then(() => { video.pause(); })
+             .catch(() => { film.primed = false; }); // blocked (e.g. Low Power Mode) — retry on first gesture
+          } else {
+            video.pause();
+          }
+        };
         video.addEventListener("loadedmetadata", markReady);
         video.addEventListener("error", markMissing);
         if (source) source.addEventListener("error", markMissing);
         video.addEventListener("seeked", () => { film.seekPending = false; });
         if (video.readyState >= 1) markReady();
+        if (video.preload === "auto") film.prime();
       }
 
       films.push(film);
     });
+
+    // if autoplay-priming was blocked, retry on the first user gesture
+    const gesturePrime = () => films.forEach((f) => f.prime && f.prime());
+    window.addEventListener("touchstart", gesturePrime, { once: true, passive: true });
+    window.addEventListener("pointerdown", gesturePrime, { once: true, passive: true });
 
     // bump lazy films to full preload as they approach the viewport
     if ("IntersectionObserver" in window) {
@@ -213,6 +234,7 @@
               film.video.preload = "auto";
               if (film.video.readyState < 2 && !film.missing) film.video.load();
             }
+            if (film.prime) film.prime();
           }
           io.unobserve(e.target);
         });
@@ -266,8 +288,13 @@
         const target = p * Math.max(v.duration - 0.05, 0);
         film.playhead = lerp(film.playhead, target, 0.14);
         if (Math.abs(film.playhead - target) < 0.002) film.playhead = target;
+        // watchdog: some browsers drop the `seeked` event on stalled seeks
+        if (film.seekPending && performance.now() - film.seekStamp > 600) {
+          film.seekPending = false;
+        }
         if (!film.seekPending && Math.abs(v.currentTime - film.playhead) > 0.01) {
           film.seekPending = true;
+          film.seekStamp = performance.now();
           try { v.currentTime = film.playhead; }
           catch (_) { film.seekPending = false; }
         }
