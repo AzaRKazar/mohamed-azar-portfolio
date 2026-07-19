@@ -992,7 +992,7 @@ body.is-loaded .hero__line[data-intro] > span { transform: none; }
 
 .footer__visitors img {
   vertical-align: middle;
-  height: 14px;
+  height: 20px;
   filter: grayscale(1) brightness(1.4);
   opacity: 0.85;
 }
