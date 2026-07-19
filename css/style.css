@@ -984,6 +984,18 @@ body.is-loaded .hero__line[data-intro] > span { transform: none; }
 .footer__clock { font-variant-numeric: tabular-nums; }
 .footer__top { color: var(--muted); transition: color 0.3s; }
 .footer__top:hover { color: var(--accent); }
+.footer__visitors {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer__visitors img {
+  vertical-align: middle;
+  height: 14px;
+  filter: grayscale(1) brightness(1.4);
+  opacity: 0.85;
+}
 
 /* ============================================================
    REDUCED MOTION — kill all choreography
