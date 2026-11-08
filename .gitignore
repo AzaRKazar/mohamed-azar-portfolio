@@ -1,5 +1,6 @@
 .claude
 serve.py
+design/
 Thumbs.db
 assets/video/_originals/
 *.md

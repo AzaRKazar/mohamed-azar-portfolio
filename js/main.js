@@ -319,7 +319,9 @@
       const rect = item.el.getBoundingClientRect();
       if (rect.bottom < -80 || rect.top > vh + 80) continue;
       const center = rect.top + rect.height / 2;
-      const target = clamp((center - vh / 2) * -0.055, -26, 26);
+      // limit scales with the frame, so small phone-sized images stay covered too
+      const limit = rect.height * 0.03;
+      const target = clamp((center - vh / 2) * -0.055, -limit, limit);
       item.py = lerp(item.py, target, 0.12);
       item.el.style.setProperty("--py", `${item.py.toFixed(2)}px`);
     }

@@ -803,14 +803,14 @@ body.is-loaded .hero__line[data-intro] > span { transform: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.02) translateY(var(--py, 0px));
-  transition: transform 0.8s var(--ease-out), filter 0.8s;
-  filter: saturate(0.85) contrast(1.02);
+  /* the 7% zoom always hides more than the parallax shift (3% of height, see main.js),
+     so the frame's background can never show at the top or bottom edge */
+  transform: scale(1.07) translateY(var(--py, 0px));
+  transition: transform 0.8s var(--ease-out);
   will-change: transform;
 }
 .project:hover .media img {
-  transform: scale(1.06) translateY(var(--py, 0px));
-  filter: saturate(1) contrast(1.02);
+  transform: scale(1.1) translateY(var(--py, 0px));
 }
 /* screenshot missing → styled placeholder panel, no broken icon */
 .media__ph {
